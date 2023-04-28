@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<HEAD>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width", "inital-scale=1">
+    <title>Sign-up</title>
+</HEAD>
+<body>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+    <form method="POST">
+    <h1>Sign-up Page</h1>
+    Username: <input type="text" name="username" required>
+    Email: <input type="email" name="email" required>
+    Password: <input type="password" name="password" required>
+    <input type="submit">
+</body>
+  
+</html>
